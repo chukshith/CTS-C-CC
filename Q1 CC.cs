@@ -1,25 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 public class CC
 {
     public static int[,] GetArray(int n)
     {
         int[,] Array2 = new int[n, n];
-        for (int i = 0; i < n; i++)
+        for (int a = 0; a < n; a++)
         {
-            for (int j = 0; j < n; j++)
+            for (int b = 0; b < n; b++)
             {
-                if (i == j)
+                if (a == b)
                 {
-                    Array2[i, j] = 0;
+                    Array2[a, b] = 0;
                 }
-                if (i < j)
+                if (a < b)
                 {
-                    Array2[i, j] = 1;
+                    Array2[a, b] = 1;
                 }
-                if (i > j)
+                if (a > b)
                 {
-                    Array2[i, j] = -1;
+                    Array2[a, b] = -1;
                 }
 
             }
@@ -33,12 +37,12 @@ public class CC
         n = Convert.ToInt32(Console.ReadLine());
         int[,] Array = new int[n, n];
         Array = GetArray(n);
-        for (int i = 0; i < n; i++)
+        for (int a = 0; a < n; a++)
         {
             Console.WriteLine("\n");
-            for (int j = 0; j < n; j++)
+            for (int b = 0; b < n; b++)
             {
-                Console.Write("{0}\t", Array[i, j]);
+                Console.Write("{0}\t", Array[a, b]);
 
             }
             Console.WriteLine("\n\n");
